@@ -1,8 +1,4 @@
-
-### 3. **JavaScript (script.js)**
-
-```javascript
-// Mobile menu toggle
+// Переключение мобильного меню
 const menuToggle = document.getElementById('mobile-menu');
 const navList = document.getElementById('nav-list');
 
@@ -10,7 +6,7 @@ menuToggle.addEventListener('click', () => {
     navList.classList.toggle('active');
 });
 
-// Animation on scroll
+// Анимация при прокрутке
 const fadeInElements = document.querySelectorAll('.fade-in, .slide-in, .fade-in-up');
 
 const observer = new IntersectionObserver((entries) => {
