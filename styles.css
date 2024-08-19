@@ -1,4 +1,4 @@
-/* Globale Einstellungen */
+/* Общие настройки */
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +13,11 @@ body {
     overflow-x: hidden;
 }
 
-/* Header und Navigation */
+/* Header и навигация */
 header {
     background: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -35,10 +35,10 @@ nav {
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .nav-list {
@@ -47,13 +47,13 @@ nav {
 }
 
 .nav-list li {
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 .nav-list a {
     color: #fff;
     text-decoration: none;
-    padding: 8px 15px;
+    padding: 10px 15px;
     transition: background 0.3s, color 0.3s;
     border-radius: 5px;
 }
@@ -77,7 +77,7 @@ nav {
     transition: all 0.3s;
 }
 
-/* Sektionen und Text */
+/* Секции и текст */
 section {
     padding: 80px 20px;
     max-width: 1200px;
@@ -98,7 +98,7 @@ p {
     color: #555;
 }
 
-/* Buttons */
+/* Кнопки */
 .btn {
     padding: 10px 20px;
     font-size: 16px;
@@ -139,7 +139,7 @@ p {
     opacity: 1;
 }
 
-/* Kartenstil */
+/* Стиль карточек */
 .card-container {
     display: flex;
     justify-content: space-around;
@@ -149,11 +149,11 @@ p {
 
 .card {
     background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 300px;
+    width: calc(33.333% - 20px);
     color: #fff;
     text-align: left;
 }
@@ -190,7 +190,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Animationen */
+/* Анимации */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -211,5 +211,69 @@ footer {
 }
 
 .slide-in {
-    animation: slideIn 1s ease-in
+    animation: slideIn 1s ease-in;
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease-in;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: #333;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s;
+    }
+
+    .nav-list.active {
+        left: 0;
+    }
+
+    .nav-list li {
+        margin: 15px 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
