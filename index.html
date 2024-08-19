@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderne Webdesign</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Webseite</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="#home">Startseite</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#services">Dienstleistungen</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="fade-in">
+        <h1>Willkommen auf unserer modernen Webseite</h1>
+        <p>Entdecken Sie unser responsives und dynamisches Design.</p>
+        <button class="btn glow-on-hover">Mehr erfahren</button>
+    </section>
+
+    <section id="about" class="slide-in">
+        <h2>Über uns</h2>
+        <p>Wir sind ein kreatives Team, das sich auf moderne Weblösungen spezialisiert hat.</p>
+    </section>
+
+    <section id="services" class="fade-in-up">
+        <h2>Dienstleistungen</h2>
+        <p>Wir bieten eine Vielzahl von Dienstleistungen an, die auf Ihre Bedürfnisse zugeschnitten sind.</p>
+        <div class="card-container">
+            <div class="card">
+                <h3>Webdesign</h3>
+                <p>Kreative und funktionale Webseiten.</p>
+                <button class="btn card-btn">Mehr erfahren</button>
+            </div>
+            <div class="card">
+                <h3>Entwicklung</h3>
+                <p>Hochwertige Webanwendungen.</p>
+                <button class="btn card-btn">Mehr erfahren</button>
+            </div>
+            <div class="card">
+                <h3>SEO</h3>
+                <p>Optimierung für Suchmaschinen.</p>
+                <button class="btn card-btn">Mehr erfahren</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="slide-in">
+        <h2>Kontakt</h2>
+        <p>Wir würden uns freuen, von Ihnen zu hören.</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn glow-on-hover">Senden</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Alle Rechte vorbehalten. Gestaltet von Ihrem kreativen Team.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
